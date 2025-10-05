@@ -1,0 +1,515 @@
+:root {
+  --bg: #040406;
+  --card: #0f1114;
+  --accent: #ff3b3b;
+  /* strike red */
+  --accent-2: #ffb86b;
+  --muted: #9aa3b2;
+  --glass: rgba(255, 255, 255, 0.04);
+  --radius: 16px;
+  --max-width: 1200px;
+  --gap: 1rem;
+  --ff: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ff);
+  background: radial-gradient(
+      1200px 600px at 10% 10%,
+      rgba(255, 59, 59, 0.06),
+      transparent
+    ),
+    radial-gradient(
+      900px 400px at 90% 90%,
+      rgba(255, 184, 107, 0.03),
+      transparent
+    ),
+    var(--bg);
+  color: #e8eef6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.45;
+}
+
+/* reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Container */
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+/* NAV */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(4, 4, 6, 0.55), rgba(4, 4, 6, 0.25));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  padding: 0.6rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 6px 24px rgba(255, 59, 59, 0.12),
+    inset 0 -6px 18px rgba(0, 0, 0, 0.25);
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  transform: skewX(-12deg);
+  font-family: monospace;
+}
+
+.logo span {
+  transform: skewX(12deg);
+  display: inline-block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cta {
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), #ff6b5a);
+  color: #081018;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(255, 59, 59, 0.12);
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  padding: 2.4rem 0;
+  min-height: 66vh;
+  grid-template-columns: 1fr;
+}
+
+.hero-inner {
+  display: flex;
+  gap: 1.25rem;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1.03;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff 0%, #dbe9ff 40%, var(--accent) 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+/* Glitch effect using multiple shadows and keyframes */
+@keyframes glitch-anim {
+  0% {
+    text-shadow: 2px 0 var(--accent);
+    transform: translate(0, 0);
+  }
+
+  20% {
+    text-shadow: -2px 0 var(--accent-2);
+    transform: translate(-1px, 1px);
+  }
+
+  40% {
+    text-shadow: 3px -1px rgba(255, 255, 255, 0.03);
+    transform: translate(1px, -1px);
+  }
+
+  60% {
+    text-shadow: -1px 2px rgba(0, 0, 0, 0.3);
+    transform: translate(-1px, 0);
+  }
+
+  80% {
+    text-shadow: 2px -2px var(--accent);
+    transform: translate(0, 1px);
+  }
+
+  100% {
+    text-shadow: none;
+    transform: translate(0, 0);
+  }
+}
+
+.glitch {
+  display: inline-block;
+  animation: glitch-anim 3.6s infinite linear;
+}
+
+.lead {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.7rem 1.1rem;
+  border-radius: 12px;
+  background: var(--glass);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  font-weight: 700;
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.06);
+}
+
+/* Decorative strike slash - uses pseudo element */
+.hero-visual {
+  height: 220px;
+  border-radius: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(0, 0, 0, 0.07)
+  );
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.slash {
+  position: absolute;
+  left: -20%;
+  top: 30%;
+  width: 140%;
+  height: 220%;
+  transform: rotate(-18deg);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 59, 59, 0.06),
+    rgba(255, 184, 107, 0.06)
+  );
+  mix-blend-mode: screen;
+  filter: blur(12px);
+}
+
+.bolt {
+  position: relative;
+  z-index: 2;
+  font-weight: 800;
+  font-size: 1.6rem;
+  padding: 1rem 1.4rem;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #0b1216, rgba(255, 255, 255, 0.02));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Feature cards */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  border-radius: 14px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.card h3 {
+  margin: 0.2rem 0;
+}
+
+.features {
+  display: grid;
+  gap: 0.8rem;
+}
+
+/* subtle hover lift using transform */
+.card:hover {
+  transform: translateY(-8px) scale(1.01);
+  transition: transform 0.36s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+/* Animated underline using gradient */
+.fancy-link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.fancy-link:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.35s;
+}
+
+.fancy-link:hover:after {
+  transform: scaleX(1);
+}
+
+/* Footer */
+footer {
+  padding: 2rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Layout adjustments for larger screens */
+@media (min-width: 720px) {
+  .hero {
+    grid-template-columns: 1fr 420px;
+    min-height: 70vh;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .wrap {
+    padding: 2rem;
+  }
+
+  .logo {
+    width: 56px;
+    height: 56px;
+  }
+
+  .hero-visual {
+    height: 320px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* decorative animated underline bar at bottom hero */
+.pulse-bar {
+  height: 6px;
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 59, 59, 0.2),
+    rgba(255, 184, 107, 0.12)
+  );
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.pulse-bar:before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 30%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  animation: bar-move 3s infinite;
+}
+
+@keyframes bar-move {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+/* subtle parallax stripes using CSS background-position animation */
+@keyframes stripes {
+  to {
+    background-position: 1000px 0;
+  }
+}
+
+.hero-visual:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.01) 0 2px,
+    transparent 2px 14px
+  );
+  opacity: 0.6;
+  transform: translateZ(0);
+  animation: stripes 60s linear infinite;
+}
+
+/* card tilt via gradient and transform on hover */
+.card-inner {
+  transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 0.45s;
+  transform-origin: center;
+}
+
+.card:hover .card-inner {
+  transform: rotateX(6deg) rotateY(-4deg) translateY(-6px);
+}
+
+/* small helpers */
+.muted {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.kicker {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+/* Fluid typography */
+h1 {
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+}
+
+.lead {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+/* Mobile-first nav improvements */
+.nav {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-links {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Hero responsiveness */
+.hero {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.hero-inner {
+  align-items: center;
+}
+
+.hero-cta {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Smarter breakpoints */
+@media (min-width: 480px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr 380px;
+    text-align: left;
+  }
+
+  .hero-inner {
+    align-items: flex-start;
+  }
+
+  .nav {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wrap {
+    padding: 3rem;
+  }
+
+  .hero-visual {
+    height: 380px;
+  }
+}
+
+/* Keep images & visuals in ratio */
+.hero-visual {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}

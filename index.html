@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>STRIKE — Creative CSS Design</title>
+    <meta name="description"
+        content="STRIKE — a creative, mobile-first single-file CSS-only website with animations and responsive layout.">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrap nav">
+            <div class="brand">
+                <div class="logo" aria-hidden><span>STR</span></div>
+                <div>
+                    <div style="font-weight:800">STRIKE</div>
+                    <div class="muted" style="font-size:.75rem">Creative CSS Design</div>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a class="muted" href="#features">Features</a>
+                <a class="muted" href="#how">How to use</a>
+                <a href="#deploy" class="fancy-link">Deploy</a>
+                <a class="cta" href="#start">Get the Code</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="hero">
+            <div class="hero-inner">
+                <div>
+                    <div class="kicker">Original Design • CSS Only</div>
+                    <h1><span class="glitch">STRIKE</span> — Make an impression with motion</h1>
+                    <p class="lead">A bold, mobile-first portfolio-style landing page built with only HTML and CSS.
+                        Responsive across mobile, tablet, and desktop. Includes creative animations, micro-interactions,
+                        and a modern glass look.</p>
+                </div>
+
+                <div class="hero-cta">
+                    <a class="btn" href="#features">Explore features</a>
+                    <a class="btn ghost" href="#start">Download</a>
+                </div>
+
+                <div class="pulse-bar" aria-hidden></div>
+            </div>
+
+            <div class="hero-visual" aria-hidden>
+                <div class="slash"></div>
+                <div class="bolt">STRIKE <span style="color:var(--accent);">/</span> Design</div>
+            </div>
+        </section>
+
+        <section id="features" style="padding-top:1.2rem">
+            <h2 style="margin-top:0">Features</h2>
+            <div class="grid features">
+                <article class="card">
+                    <div class="card-inner">
+                        <div class="kicker">CSS Animations</div>
+                        <h3>Glitch heading & animated hero</h3>
+                        <p class="muted">Pure CSS keyframes, gradient motion, and transform-based micro-interactions.
+                            Works without JavaScript.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-inner">
+                        <div class="kicker">Mobile-First</div>
+                        <h3>Responsive by design</h3>
+                        <p class="muted">Layout scales gracefully from narrow phones up to large desktop monitors using
+                            CSS grid and media queries.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-inner">
+                        <div class="kicker">Accessibility</div>
+                        <h3>Reduced motion support</h3>
+                        <p class="muted">Detects users who prefer reduced motion and turns off heavy animation for them.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-inner">
+                        <div class="kicker">No JavaScript</div>
+                        <h3>Lightweight & fast</h3>
+                        <p class="muted">Single file, easy to host on GitHub Pages, Netlify or Vercel — zero client
+                            scripts needed.</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-inner">
+                        <div class="kicker">Creative Effects</div>
+                        <h3>Gradient, glass, and tilt</h3>
+                        <p class="muted">Multiple layers of gradients and a subtle card tilt on hover for modern polish.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-inner">
+                        <div class="kicker">Easy to Fork</div>
+                        <h3>Single-file start</h3>
+                        <p class="muted">Copy the index.html and customize the palette, fonts and content to match your
+                            brand.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="how" style="margin-top:2rem">
+            <h2>How to use</h2>
+            <div class="card">
+                <ol style="margin:0 0 0 1rem">
+                    <li>Save this file as <code>index.html</code>.</li>
+                    <li>Create a public GitHub repo and push the file.
+                        <ul>
+                            <li>Enable GitHub Pages or deploy to Netlify/Vercel.</li>
+                        </ul>
+                    </li>
+                    <li>Share your live URL on Twitter and LinkedIn with the hashtags <strong>#STRIKEDesign</strong>
+                        <strong>#CSSOnly</strong> <strong>#WebDesign</strong>.
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="start" style="margin-top:2rem;">
+            <h2>Get the code</h2>
+            <div class="card">
+                <p class="muted">This project is a single HTML file to keep things simple. You can fork it, add assets,
+                    or split into multiple files for production.</p>
+                <p style="margin:0">Suggested repo name: <code>strike-creative</code></p>
+            </div>
+        </section>
+
+        <section id="deploy" style="margin-top:2rem;">
+            <h2>Deploy & Share</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Deploy on GitHub Pages</h3>
+                    <p class="muted">Push to a public repo, then enable Pages from the main branch. Your site will be
+                        available at <code>https://&lt;username&gt;.github.io/&lt;repo&gt;/</code>.</p>
+                </div>
+                <div class="card">
+                    <h3>Deploy on Netlify</h3>
+                    <p class="muted">Drag and drop the folder or connect the GitHub repo. Netlify will build a static
+                        site and provide a live link.</p>
+                </div>
+                <div class="card">
+                    <h3>Deploy on Vercel</h3>
+                    <p class="muted">Import the GitHub repo on Vercel and deploy. For static HTML, Vercel will publish
+                        immediately.</p>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top:2rem">
+            <h2>Credits & Notes</h2>
+            <div class="card">
+                <p class="muted">Built for the challenge: create a STRIKE-branded creative design using only HTML and
+                    CSS. Feel free to modify the color variables and typography to match your exact brand guidelines.
+                </p>
+            </div>
+        </section>
+
+        <footer style="margin-top:2rem">
+            <div class="card">
+                <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap">
+                    <div>
+                        <strong>STRIKE</strong> — Creative CSS Design
+                        <div class="muted">License: MIT</div>
+                    </div>
+                    <div class="muted">Made with ❤️ • HTML & CSS only</div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
