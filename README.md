@@ -18,8 +18,7 @@ A bold, original, **mobile-first website** designed with only **HTML + CSS**. No
 
 ## Deployment
 
-![Website Link](https://strike-creative.netlify.app/)
-
+[STRIKE Website](https://strike-creative.netlify.app/)
 
 ---
 
@@ -28,8 +27,8 @@ A bold, original, **mobile-first website** designed with only **HTML + CSS**. No
 ```plaintext
 strike-creative/
 ├── index.html
-├── style.css   
-└── README.md 
+├── style.css
+└── README.md
 ```
 
 ---
@@ -60,4 +59,4 @@ MIT License — free to use, modify, and share. If you create something amazing 
 
 ### ❤️ Credits
 
-Designed & developed with love using **only HTML and CSS**. Built for the creative coding challenge: *Strike a balance between design and simplicity.*
+Designed & developed with love using **only HTML and CSS**. Built for the creative coding challenge: _Strike a balance between design and simplicity._
