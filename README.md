@@ -16,7 +16,7 @@ A bold, original, **mobile-first website** designed with only **HTML + CSS**. No
 
 ---
 
-## Deployment
+## 🚀 Deployment
 
 [STRIKE Website](https://strike-creative.netlify.app/)
 
