@@ -13,7 +13,13 @@ A bold, original, **mobile-first website** designed with only **HTML + CSS**. No
 - ⚡ **Fast and lightweight** — zero JavaScript, single-file build.
 - ♿ **Accessibility friendly** — respects `prefers-reduced-motion` settings.
 - 🪞 **Modern design language** — gradients, glass effects, neon accents.
-- 🚀 **Easy deployment** — works out-of-the-box on GitHub Pages, Netlify, or Vercel.
+
+---
+
+## Deployment
+
+![Website Link](https://strike-creative.netlify.app/)
+
 
 ---
 
