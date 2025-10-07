@@ -2,7 +2,7 @@
 
 A bold, original, **mobile-first website** designed with only **HTML + CSS**. No JavaScript, no frameworks — just pure CSS creativity. STRIKE is fully responsive across devices and comes with polished animations, glitch effects, gradients, and glass-inspired UI touches.
 
-![STRIKE Preview](strike-preview.png)
+![STRIKE Preview](strike_screenshot.png)
 
 ---
 
